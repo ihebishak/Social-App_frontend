@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SocialAppFrontend"
+    }
+  },
+  "defaultProject": "SocialAppFrontend",
+  "cli": {
+    "analytics": "18e651e4-e3d7-4a82-9ed6-50e4943febbe"
+  }
 }
