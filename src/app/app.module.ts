@@ -26,6 +26,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserComponent } from './pages/user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
+
 
 @NgModule({
   declarations: [
@@ -57,7 +64,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatSnackBarModule
+
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

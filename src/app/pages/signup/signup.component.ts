@@ -1,6 +1,6 @@
 import { UserService } from './../../services/user.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -30,7 +30,8 @@ export class SignupComponent implements OnInit {
     formSubmit() {
     console.log(this.user);
     if(this.user.username==null || this.user.username=="")
-    { this.snackBar.open('Username is required', 'Close'); }
+    { this.snackBar.open('Username is required', 'Close'); 
+  }
     else
     {
       //addUser: userservice
@@ -45,7 +46,6 @@ export class SignupComponent implements OnInit {
         },
        (error)=>{
         console.log(error)
-        this.snackBar.open('Something went wrong !! Try again.','close');
       }
      );
   }
