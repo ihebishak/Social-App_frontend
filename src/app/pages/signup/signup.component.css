@@ -23,7 +23,7 @@ body {
 .card-signin .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url('https://drive.google.com/uc?export=view&id=1e19hYAR0C72nbK58tuR_3WSppzy2P2_Y');
+    background: scroll center url("src/assets/image/signup_image.jpg");
     background-size: cover;
 }
 
