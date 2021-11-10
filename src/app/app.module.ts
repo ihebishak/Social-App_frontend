@@ -30,9 +30,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {AuthService, AuthServiceConfig} from 'angularx-social-login';
+import { SocialLoginModule,GoogleLoginProvider} from 'angularx-social-login';
+import { authInterceptorProviders } from './services/auth.interceptor';
 
 
-
+export function provideConfig(){
+  const config = new AuthServiceConfig([{ id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('453036754442-o78jqcaq3fs3l3ivikc21sc0fbr04vvg.apps.googleusercontent.com')}]);
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -71,7 +78,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 
   
   ],
-  providers: [],
+  providers: [authInterceptorProviders, AuthService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
