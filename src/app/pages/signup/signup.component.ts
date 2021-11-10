@@ -10,8 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private userService: UserService,private snackBar: MatSnackBar) {
-   }
+  constructor(private userService: UserService , private snackBar: MatSnackBar) {}
 
    public user = {
     username:'',
@@ -30,8 +29,10 @@ export class SignupComponent implements OnInit {
     formSubmit() {
     console.log(this.user);
     if(this.user.username==null || this.user.username=="")
-    { this.snackBar.open('Username is required', 'Close'); 
-  }
+    {
+       this.snackBar.open('Username is required', 'Close', {
+        duration:  60000})
+    }
     else
     {
       //addUser: userservice
